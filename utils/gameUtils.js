@@ -7,7 +7,8 @@ const { VideoGames, Genres } = require("./data");
  * @returns {*} - An array of games matching the genre
  */
 function getGamesByGenre(genre, x) {
-    // Implementation here
+    const gamesByGenre = VideoGames.filter((game) => game.genre === genre);
+    return gamesByGenre.slice(0, x);
 }
 
 /**
@@ -16,7 +17,8 @@ function getGamesByGenre(genre, x) {
  * @returns {*} - An array of top-rated games
  */
 function getTopRatedGames(x) {
-    // Implementation here
+    const topRatedGames = VideoGames.filter(game => game.averageRating !== null).sort((a,b) => b.averageRating - a.averageRating);
+    return topRatedGames.slice(0, x);
 }
 
 /**
