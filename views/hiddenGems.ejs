@@ -1,10 +1,11 @@
-<h1>Welcome to Game Explorer</h1>
+<h1>Hidden Gems</h1>
 <div class="games-list">
-    <% games.forEach(game => { %>
+    <% hiddenGems.forEach(game => { %>
         <div class="game-item">
             <h2><a href="/game/<%= game.id %>"><%= game.title %></a></h2>
             <p>Released: <%= game.year %></p>
             <p>Rating: <%= game.rating %>/10</p>
+            <p><%= game.description %></p>
         </div>
     <% }) %>
 </div>
