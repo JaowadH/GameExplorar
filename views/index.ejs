@@ -1,10 +1,40 @@
-<h1>Welcome to Game Explorer</h1>
-<div class="games-list">
-    <% games.forEach(game => { %>
-        <div class="game-item">
-            <h2><a href="/game/<%= game.id %>"><%= game.title %></a></h2>
-            <p>Released: <%= game.year %></p>
-            <p>Rating: <%= game.rating %>/10</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Explorer</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <h1>Game Explorer</h1>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <button class="close-button" onclick="toggleMenu()">✖</button>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/top-rated">Top Rated</a></li>
+            <li><a href="/upcoming">Upcoming</a></li>
+            <li><a href="/hidden-gems">Hidden Gems</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="games-list">
+            <% games.forEach(game => { %>
+                <div class="game-item">
+                    <h2><a href="/game/<%= game.id %>"><%= game.title %></a></h2>
+                    <p>Released: <%= game.year %></p>
+                    <p>Rating: <%= game.rating %>/10</p>
+                </div>
+            <% }) %>
         </div>
-    <% }) %>
-</div>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
