@@ -7,7 +7,8 @@ const { VideoGames, Genres } = require("./data");
  * @returns {*} - An array of games matching the genre
  */
 function getGamesByGenre(genre, x) {
-    const gamesByGenre = VideoGames.filter((game) => game.genre === genre);
+    const gamesByGenre = VideoGames
+    .filter((game) => game.genre === genre);
     return gamesByGenre.slice(0, x);
 }
 
@@ -17,7 +18,9 @@ function getGamesByGenre(genre, x) {
  * @returns {*} - An array of top-rated games
  */
 function getTopRatedGames(x) {
-    const topRatedGames = VideoGames.filter(game => game.averageRating !== null).sort((a,b) => b.averageRating - a.averageRating);
+    const topRatedGames = VideoGames
+    .filter(game => game.averageRating !== null)
+    .sort((a,b) => b.averageRating - a.averageRating);
     return topRatedGames.slice(0, x);
 }
 
@@ -27,7 +30,7 @@ function getTopRatedGames(x) {
  * @returns {*} - The game object
  */
 function getGameDetailsById(id) {
-    // Implementation here
+    return VideoGames.find(game => game.id === id) || null;
 }
 
 /**
@@ -35,7 +38,9 @@ function getGameDetailsById(id) {
  * @returns {*} - A random game ID
  */
 function selectRandomGameId() {
-    // Implementation here
+    if (VideoGames.length === 0) return null;
+    const randomIndex = Math.floor(Math.random() * VideoGames.length);
+    return VideoGames[randomIndex].id;
 }
 
 /**
@@ -43,7 +48,8 @@ function selectRandomGameId() {
  * @returns {*} - An array of hidden gem games
  */
 function getHiddenGems() {
-    // Implementation here
+    return VideoGames
+    .filter(game => game.averageRating >= 9 && game.numberOfReviews < 1000);
 }
 
 // Export the functions to be used in other modules
