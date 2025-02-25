@@ -93,20 +93,58 @@ h1 {
 }
 
 /* Games list */
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px; /* Adjust height as needed */
+    width: 100%;
+}
+
 .games-list {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents items from wrapping */
+    background: rgba(30, 30, 30, 0.9); /* Box background */
     padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    margin: auto;
+    scroll-behavior: smooth;
+    height: 50vh;
 }
 
 .game-item {
+    min-width: 200px;
+    max-width: 250px; /* Restrict width but allow text wrapping */
+    flex-shrink: 0; /* Prevents items from shrinking */
     background: rgba(85, 85, 85, 0.7);
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    width: 200px;
+    word-wrap: break-word; /* Ensures long words wrap */
+    white-space: normal; /* Allows text wrapping */
+}
+
+.game-item a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0; 
+    text-align: center;
+}
+
+.game-item a:hover {
+    background-color: #f0f0f0;
+    color: #559eff;
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(85, 158, 255, 0.8); 
+    transition: 
+        background-color 0.3s ease, 
+        box-shadow 0.3s ease, 
+        transform 0.3s ease;
 }
 
 /* Footer styles */
