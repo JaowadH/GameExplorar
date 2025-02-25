@@ -1,11 +1,11 @@
-<section class="games-list">
-    <% games.forEach(game => { %>
+<h1>Hidden Gems</h1>
+<div class="games-list">
+    <% hiddenGems.forEach(game => { %>
         <div class="game-item">
             <h2><a href="/game/<%= game.id %>"><%= game.title %></a></h2>
             <p>Released: <%= game.year %></p>
             <p>Rating: <%= game.rating %>/10</p>
+            <p><%= game.description %></p>
         </div>
     <% }) %>
-</section>
-
-<script src="/script.js"></script>
+</div>

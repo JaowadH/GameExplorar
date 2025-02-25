@@ -1,23 +1,122 @@
-/* Base styling, feel free to remove or alter */
-
-body {
-    background: linear-gradient(90deg, rgba(93,142,251,1) 0%, rgba(93,142,251,1) 50%, rgba(0,212,255,1) 100%);
+/* Ensure the whole page takes up at least full height */
+html, body {
     height: 100%;
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Lato', sans-serif;
-    display: flex;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
     color: #F6F6F6;
-}
-
-.main-content {
     display: flex;
-    justify-content: center;
-    flex: 1;
-    align-items: center;
     flex-direction: column;
+    overflow-x: hidden;
+    background: linear-gradient(90deg, rgb(66, 66, 66) 0%, rgb(56, 56, 56) 50%, rgb(36, 36, 36) 100%);
 }
 
-.main-content h1 {
-    font-size: 50px;
+/* Make main content push footer down */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Header styles */
+.header {
+    background: #1f1f1f;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 24px;
+    z-index: 10;
+    width: 100%;
+    position: relative;
+}
+
+h1 {
+    flex-grow: 1;  
+    text-align: center;  
+}
+
+.menu-button {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0; 
+}
+
+/* Sidebar links */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 60px; 
+}
+
+.sidebar li {
+    padding: 10px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0; 
+    text-align: center;
+}
+
+.close-button {
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    align-self: flex-end;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Games list */
+.games-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game-item {
+    background: rgba(85, 85, 85, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
