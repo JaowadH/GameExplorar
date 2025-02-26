@@ -38,7 +38,10 @@ function getGameDetailsById(id) {
  * @returns {*} - A random game ID
  */
 function selectRandomGameId() {
-    if (VideoGames.length === 0) return null;
+    if (!VideoGames.length === 0) return null;
+
+    const validGames = VideoGames.filter(game => game.id !== undefined && game.id !== null)
+    if (validGames.length === 0) return null;
     const randomIndex = Math.floor(Math.random() * VideoGames.length);
     return VideoGames[randomIndex].id;
 }
@@ -48,7 +51,7 @@ function selectRandomGameId() {
  * @returns {*} - An array of hidden gem games
  */
 function getHiddenGems() {
-    return VideoGames
+    return global.VideoGames
     .filter(game => game.averageRating >= 9 && game.numberOfReviews < 1000);
 }
 
