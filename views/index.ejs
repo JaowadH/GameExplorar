@@ -2,10 +2,12 @@
 <section class="games-list">
     <% games.forEach(game => { %>
         <div class="game-item">
-            <h2><a href="/game/<%= game.id %>"><%= game.title %></a></h2>
+            <h2 class="game-title"><a href="/game/<%= game.id %>"><%= game.title %></a></h2>
             <img src="<%= game.image %>" alt="<%= game.title %>" class="game-image">
+            <div class="game-info">
             <p>Released: <%= game.releaseYear %></p>
             <p>Rating: <%= game.averageRating %>/10</p>
+            </div>
         </div>
     <% }) %>
 </section>

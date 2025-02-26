@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     try {
         const games = VideoGames.sort(() => 0.5 - Math.random()).slice(0, 9);
-        res.render('index', { games }); // No need for `{ layout: 'layout' }` because it's default
+        res.render('index', { games, pageTitle: "Game Explorer" }); // No need for `{ layout: 'layout' }` because it's default
     } catch (error) {
         console.error("Error loading home page:", error);
         res.status(500).render('error', { message: "Internal Server Error" });
@@ -59,7 +59,7 @@ app.get('/game/:id', (req, res) => {
 app.get('/top-rated', (req, res) => {
     try {
         const topGames = getTopRatedGames(15);
-        res.render('topRated', { topGames });
+        res.render('topRated', { topGames, pageTitle: "Top Rated Games"});
     } catch (error) {
         console.error("Error fetching top-rated games:", error);
         res.status(500).render('error', { message: "Internal Server Error" });
@@ -84,7 +84,7 @@ app.get('/random', (req, res) => {
 app.get('/upcoming', (req, res) => {
     try {
         const upcomingGames = VideoGames.filter(game => game.year > new Date().getFullYear()).slice(0, 5);
-        res.render('upcoming', { upcomingGames });
+        res.render('upcoming', { upcomingGames, pageTitle: "Upcoming Games" });
     } catch (error) {
         console.error("Error fetching upcoming games:", error);
         res.status(500).render('error', { message: "Internal Server Error" });
@@ -95,7 +95,7 @@ app.get('/upcoming', (req, res) => {
 app.get('/hidden-gems', (req, res) => {
     try {
         const hiddenGems = getHiddenGems();
-        res.render('hiddenGems', { hiddenGems });
+        res.render('hiddenGems', { hiddenGems, pageTitle: "Hidden Gems" });
     } catch (error) {
         console.error("Error fetching hidden gems:", error);
         res.status(500).render('error', { message: "Internal Server Error" });
