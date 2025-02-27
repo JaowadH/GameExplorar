@@ -30,9 +30,8 @@ function getTopRatedGames(x) {
  * @returns {*} - The game object
  */
 function getGameDetailsById(id) {
-    return VideoGames.find(game => game.id === id) || null;
+    return VideoGames.find(game => game.id.toString() === id.toString()) || null;
 }
-
 /**
  * Select a random game ID
  * @returns {*} - A random game ID

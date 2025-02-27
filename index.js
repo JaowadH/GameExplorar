@@ -48,7 +48,7 @@ app.get('/game/:id', (req, res) => {
             .filter(g => g.id !== game.id)
             .slice(0, 3);
         
-        res.render('game', { game, recommendations });
+        res.render('game', { game, recommendations, pageTitle: game.title });
     } catch (error) {
         console.error("Error fetching game details:", error);
         res.status(500).render('error', { message: "Internal Server Error" });

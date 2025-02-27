@@ -19,6 +19,7 @@ const Genres = {
 
 const VideoGames = [
   {
+    id: 1,
     title: "The Legend of Zelda: Breath of the Wild",
     description: "An open-world action-adventure game set in Hyrule.",
     developer: "Nintendo",
@@ -31,6 +32,7 @@ const VideoGames = [
   },
 
   {
+    id: 2,
     title: "The Witcher 3: Wild Hunt",
     description:
       "A sprawling RPG filled with monsters, magic, and rich storytelling.",
@@ -44,6 +46,7 @@ const VideoGames = [
   },
 
   {
+    id: 3,
     title: "Half-Life 2",
     description:
       "A groundbreaking first-person shooter with physics-based gameplay.",
@@ -57,6 +60,7 @@ const VideoGames = [
   },
 
   {
+    id: 4, 
     title: "Dark Souls III",
     description: "A brutally challenging RPG with rich lore and deep combat.",
     developer: "FromSoftware",
@@ -68,6 +72,7 @@ const VideoGames = [
     image: "/images/dark-souls-3.jpg",
   },
   {
+    id: 5,
     title: "Minecraft",
     description:
       "A sandbox game where you can build and explore infinite worlds.",
@@ -80,6 +85,7 @@ const VideoGames = [
     image: "/images/minecraft.jpg",
   },
   {
+    id: 6,
     title: "Celeste",
     description:
       "A heartfelt platformer about climbing a mountain while overcoming personal struggles.",
@@ -92,6 +98,7 @@ const VideoGames = [
     image: "/images/celeste.jpg",
   },
   {
+    id: 7,
     title: "Hollow Knight",
     description:
       "A hand-drawn Metroidvania with deep exploration and tight combat.",
@@ -104,6 +111,7 @@ const VideoGames = [
     image: "/images/hollow-knight.jpg",
   },
   {
+    id: 8,
     title: "Katana ZERO",
     description: "A stylish neo-noir action-platformer with fast-paced combat.",
     developer: "Askiisoft",
@@ -115,6 +123,7 @@ const VideoGames = [
     image: "/images/katana-zero.jpg",
   },
   {
+    id: 9,
     title: "Outer Wilds",
     description:
       "A mystery exploration game set in a solar system trapped in a time loop.",
@@ -127,6 +136,7 @@ const VideoGames = [
     image: "/images/outer-wilds.jpg",
   },
   {
+    id: 10,
     title: "Disco Elysium",
     description:
       "A narrative-driven RPG where you play as a detective with unique skill-based dialogue.",
@@ -139,6 +149,7 @@ const VideoGames = [
     image: "/images/disco-elysium.jpg",
   },
   {
+    id: 11,
     title: "Starfield",
     description:
       "A space exploration RPG from the creators of Fallout and Skyrim.",
@@ -151,6 +162,7 @@ const VideoGames = [
     image: "/images/starfield.jpg",
   },
   {
+    id: 12,
     title: "Metroid Prime 4",
     description: "The next installment in the Metroid Prime series.",
     developer: "Nintendo",
@@ -162,6 +174,7 @@ const VideoGames = [
     image: "/images/metroid-prime-4.jpg",
   },
   {
+    id: 13,
     title: "Hollow Knight: Silksong",
     description: "A sequel to the acclaimed indie Metroidvania, Hollow Knight.",
     developer: "Team Cherry",
@@ -173,6 +186,7 @@ const VideoGames = [
     image: "/images/hollow-knight-silksong.jpg",
   },
   {
+    id: 14,
     title: "Grand Theft Auto VI",
     description: "The next major entry in the Grand Theft Auto series.",
     developer: "Rockstar Games",
@@ -184,6 +198,7 @@ const VideoGames = [
     image: "/images/gta6.jpg",
   },
   {
+    id: 15,
     title: "Red Dead Redemption 2",
     description: "An open-world western action-adventure game.",
     developer: "Rockstar Games",
@@ -195,6 +210,7 @@ const VideoGames = [
     image: "/images/rdr2.jpg",
   },
   {
+    id: 16,
     title: "DOOM Eternal",
     description:
       "A fast-paced first-person shooter that rewards aggressive gameplay.",
@@ -207,6 +223,7 @@ const VideoGames = [
     image: "/images/doom-eternal.jpg",
   },
   {
+    id: 17,
     title: "Sid Meier's Civilization VI",
     description:
       "A turn-based strategy game where you build and expand an empire.",
@@ -219,6 +236,7 @@ const VideoGames = [
     image: "/images/civ6.jpg",
   },
   {
+    id: 18,
     title: "Bloodborne",
     description:
       "A gothic horror action RPG with intense combat and a rich world.",
@@ -231,6 +249,7 @@ const VideoGames = [
     image: "/images/bloodborne.jpg",
   },
   {
+    id: 19,
     title: "Super Mario Odyssey",
     description:
       "A globe-trotting 3D platformer featuring Mario and his hat companion, Cappy.",
@@ -243,6 +262,7 @@ const VideoGames = [
     image: "/images/super-mario-odyssey.jpg",
   },
   {
+    id: 20,
     title: "Cyberpunk 2077",
     description:
       "A futuristic RPG set in a cyberpunk city with branching stories.",
@@ -255,6 +275,7 @@ const VideoGames = [
     image: "/images/cyberpunk.jpg",
   },
   {
+    id: 21,
     title: "God of War (2018)",
     description:
       "A third-person action-adventure featuring Kratos and his son, Atreus.",
@@ -267,6 +288,7 @@ const VideoGames = [
     image: "/images/god-of-war.jpg",
   },
   {
+    id: 22,
     title: "The Elder Scrolls V: Skyrim",
     description:
       "A vast open-world RPG filled with quests, dragons, and adventure.",
@@ -279,6 +301,7 @@ const VideoGames = [
     image: "/images/skyrim.jpg",
   },
   {
+    id: 23,
     title: "Persona 5 Royal",
     description:
       "A stylish turn-based RPG about high school students fighting injustice.",
@@ -291,6 +314,7 @@ const VideoGames = [
     image: "/images/persona-5-royal.jpg",
   },
   {
+    id: 24,
     title: "FIFA 23",
     description: "The latest iteration of the FIFA soccer series.",
     developer: "EA Sports",
@@ -302,6 +326,7 @@ const VideoGames = [
     image: "/images/fifa-23.jpg",
   },
   {
+    id: 25,
     title: "Forza Horizon 5",
     description: "An open-world racing game set in Mexico.",
     developer: "Playground Games",
@@ -313,6 +338,7 @@ const VideoGames = [
     image: "/images/Forza-Horizon-5.jpg",
   },
   {
+    id: 26,
     title: "Resident Evil 4 (Remake)",
     description: "A modern reimagining of the classic survival horror game.",
     developer: "Capcom",
@@ -324,6 +350,7 @@ const VideoGames = [
     image: "/images/resident-evil-4.jpg",
   },
   {
+    id: 27,
     title: "The Forgotten City",
     description: "A time-loop mystery adventure set in an ancient Roman city.",
     developer: "Modern Storyteller",
@@ -335,6 +362,7 @@ const VideoGames = [
     image: "/images/the-forgotten-city.jpg",
   },
   {
+    id: 28,
     title: "Return of the Obra Dinn",
     description:
       "A detective puzzle game where you solve the fate of a lost ship's crew.",
@@ -347,6 +375,7 @@ const VideoGames = [
     image: "/images/return-of-the-obra-dinn.jpg",
   },
   {
+    id: 29,
     title: "Slay the Spire",
     description:
       "A deck-building rogue-like where you fight through floors of enemies using strategic card combos.",
@@ -359,6 +388,7 @@ const VideoGames = [
     image: "/images/slay-the-spire.jpg",
   },
   {
+    id: 30,
     title: "Inscryption",
     description:
       "A unique blend of deck-building, escape room puzzles, and psychological horror.",
@@ -371,6 +401,7 @@ const VideoGames = [
     image: "/images/inscryption.jpg",
   },
   {
+    id: 31,
     title: "Loop Hero",
     description:
       "A rogue-like where you shape the world around a looping hero's journey.",
@@ -383,6 +414,7 @@ const VideoGames = [
     image: "/images/loop-hero.jpg",
   },
   {
+    id: 32,
     title: "A Short Hike",
     description:
       "A relaxing exploration game where you hike up a mountain at your own pace.",
@@ -395,6 +427,7 @@ const VideoGames = [
     image: "/images/a-short-hike.jpg",
   },
   {
+    id: 33,
     title: "Into the Breach",
     description:
       "A turn-based strategy game where you control mechs defending against alien threats.",
@@ -407,6 +440,7 @@ const VideoGames = [
     image: "/images/into-the-breach.jpg",
   },
   {
+    id: 34,
     title: "Bug Fables: The Everlasting Sapling",
     description: "A charming RPG inspired by classic Paper Mario games.",
     developer: "Moonsprout Games",
@@ -418,6 +452,7 @@ const VideoGames = [
     image: "/images/bug-fables.jpg",
   },
   {
+    id: 35,
     title: "Eastward",
     description:
       "A pixel-art adventure RPG featuring a world filled with puzzles and charm.",
@@ -430,6 +465,7 @@ const VideoGames = [
     image: "/images/eastward.jpg",
   },
   {
+    id: 36,
     title: "Kingdom Come: Deliverance 2",
     description:
       "A medieval open-world RPG journey through war-torn Bohemia, where choices shape the story and survival is key.",
