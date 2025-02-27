@@ -1,15 +1,30 @@
-<h1><%= game.title %></h1>
-<p>Released: <%= game.year %></p>
-<p>Developer: <%= game.developer %></p>
-<p>Genre: <%= game.genre %></p>
-<p>Rating: <%= game.rating ? game.rating + '/10' : 'Not rated' %></p>
-<p><%= game.description %></p>
+<div class="game-container">
+    <!-- Game Image Section -->
+    <div class="game-image">
+        <img src="<%= game.image %>" alt="<%= game.title %>">
+    </div>
 
-<h2>Recommended Games</h2>
-<div class="games-list">
-    <% recommendations.forEach(rec => { %>
-        <div class="game-item">
-            <h2><a href="/game/<%= rec.id %>"><%= rec.title %></a></h2>
-        </div>
-    <% }) %>
+    <!-- Game Details Section -->
+    <div class="game-details">
+        <p><strong>Released:</strong> <%= game.releaseYear %></p>
+        <p><strong>Developer:</strong> <%= game.developer %></p>
+        <p><strong>Genre:</strong> <%= game.genre %></p>
+        <p><strong>Rating:</strong> <%= game.averageRating ? game.averageRating + '/10' : 'Not rated' %></p>
+        <br />
+        <p><strong>Description</strong></p>
+        <p><%= game.description %></p>
+    </div>
+
+    <!-- Recommended Games Section -->
+    <div class="recommended-games">
+        <h2>Recommended Games</h2>
+        <ul>
+            <% recommendations.forEach(recommendation => { %>
+                <li>
+                    <img src="<%= recommendation.image %>" alt="<%= recommendation.title %>">
+                    <a href="/game/<%= recommendation.id %>"><%= recommendation.title %></a>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
 </div>

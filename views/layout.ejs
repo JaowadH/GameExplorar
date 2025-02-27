@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Explorer</title>
     <link rel="stylesheet" href="/styles.css">
+    <% if (typeof pageCSS !== 'undefined' && pageCSS) { %>
+        <link rel="stylesheet" href="<%= pageCSS %>">
+    <% } %>
 </head>
 <body>
 
     <!-- Include Header -->
-    <%- include('partials/header') %>
+    <%- include('partials/header', { pageTitle: (typeof pageTitle !== 'undefined' ? pageTitle : "Default Title") }) %>
+
 
     <main>
-        <%- body %> <!-- This injects the content of `index.ejs` or any other page -->
+        <%- body %> 
     </main>
 
     <!-- Include Footer -->
