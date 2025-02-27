@@ -106,9 +106,18 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px; 
+    height: 800px; 
     width: 100%;
-    margin-bottom: 100px;
+    margin-top: -100px;
+}
+
+.game-container-top-rated {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; 
+    width: 100%;
+    margin-top: -100px;
 }
 
 .games-list {
@@ -117,12 +126,12 @@ main {
     overflow-x: auto; 
     white-space: nowrap; 
     background: rgba(30, 30, 30, 0.9); 
-    box-shadow: 10px 10px 15px rgba(100, 100, 100, 0.8);
+    box-shadow: 0px 0px 25px rgba(100, 100, 100, 0.8);
     padding: 20px;
     max-width: 90%;
     margin: auto;
     scroll-behavior: smooth;
-    height: 50vh;
+    height: fit-content;
 }
 
 .games-list::-webkit-scrollbar {
@@ -147,6 +156,7 @@ main {
 .game-item {
     min-width: 250px;
     max-width: 250px; 
+    height: fit-content;
     flex-shrink: 0; 
     background: rgba(85, 85, 85, 0.7);
     padding: 15px;
