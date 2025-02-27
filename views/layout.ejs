@@ -3,10 +3,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Explorer</title>
     <link rel="stylesheet" href="/styles.css">
+    <% if (typeof pageCSS !== 'undefined' && pageCSS) { %>
+        <link rel="stylesheet" href="<%= pageCSS %>">
+    <% } %>
 </head>
 <body>
 
-
+    <!-- Include Header -->
     <%- include('partials/header', { pageTitle: (typeof pageTitle !== 'undefined' ? pageTitle : "Default Title") }) %>
 
 
@@ -14,7 +17,7 @@
         <%- body %> 
     </main>
 
-
+    <!-- Include Footer -->
     <%- include('partials/footer') %>
 
     <script src="/script.js"></script>
