@@ -158,7 +158,7 @@ const VideoGames = [
     genre: Genres.RPG,
     averageRating: null,
     numberOfReviews: 0,
-    released: false,
+    released: true,
     image: "/images/starfield.jpg",
   },
   {
@@ -178,7 +178,7 @@ const VideoGames = [
     title: "Hollow Knight: Silksong",
     description: "A sequel to the acclaimed indie Metroidvania, Hollow Knight.",
     developer: "Team Cherry",
-    releaseYear: 2024,
+    releaseYear: 2026,
     genre: Genres.ADVENTURE,
     averageRating: null,
     numberOfReviews: 0,

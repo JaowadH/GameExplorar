@@ -1,14 +1,16 @@
-<h1>Upcoming Games</h1>
+<div class="game-container">
 <div class="games-list">
     <% if (upcomingGames.length > 0) { %>
         <% upcomingGames.forEach(game => { %>
             <div class="game-item">
                 <h2><a href="/game/<%= game.id %>"><%= game.title %></a></h2>
-                <p>Release Year: <%= game.year %></p>
+                <img src="<%= game.image %>" alt="<%= game.title %>" class="game-image">
+                <p>Releasing: <%= game.releaseYear %></p>
                 <p><%= game.description %></p>
             </div>
         <% }) %>
     <% } else { %>
         <p>No upcoming games available.</p>
     <% } %>
+</div>
 </div>

@@ -10,6 +10,9 @@ const {
     getHiddenGems 
 } = require('./utils/gameUtils');
 
+// Set up the global VideoGames 
+global.VideoGames = VideoGames;
+
 const app = express();
 
 // Set EJS as the templating engine
@@ -83,7 +86,9 @@ app.get('/random', (req, res) => {
 // Upcoming Games Page
 app.get('/upcoming', (req, res) => {
     try {
-        const upcomingGames = VideoGames.filter(game => game.year > new Date().getFullYear()).slice(0, 5);
+        // Filter games where released is false
+        const upcomingGames = VideoGames.filter(game => !game.released).slice(0, 5);
+        
         res.render('upcoming', {upcomingGames, pageTitle: "Upcoming Games"});
     } catch (error) {
         console.error("Error fetching upcoming games:", error);
@@ -95,10 +100,13 @@ app.get('/upcoming', (req, res) => {
 app.get('/hidden-gems', (req, res) => {
     try {
         const hiddenGems = getHiddenGems();
-        res.render('hiddenGems', {hiddenGems, pageTitle: "Hidden Gems"});
+        
+        console.log("Hidden Gems:", hiddenGems); // Debugging log
+
+        res.render('hiddenGems', { hiddenGems, pageTitle: "Hidden Gems" });
     } catch (error) {
         console.error("Error fetching hidden gems:", error);
-        res.status(500).render('error', {message: "Internal Server Error"});
+        res.status(500).render('error', { message: "Internal Server Error" });
     }
 });
 

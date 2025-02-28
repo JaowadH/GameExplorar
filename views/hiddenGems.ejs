@@ -1,11 +1,13 @@
-<h1>Hidden Gems</h1>
+<div class="game-container">
 <div class="games-list">
     <% hiddenGems.forEach(game => { %>
         <div class="game-item">
             <h2><a href="/game/<%= game.id %>"><%= game.title %></a></h2>
-            <p>Released: <%= game.year %></p>
-            <p>Rating: <%= game.rating %>/10</p>
+            <img src="<%= game.image %>" alt="<%= game.title %>" class="game-image">
+            <p>Released: <%= game.releaseYear %></p>
+            <p>Rating: <%= game.averageRating %>/10</p>
             <p><%= game.description %></p>
         </div>
     <% }) %>
+</div>
 </div>
