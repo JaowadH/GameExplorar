@@ -8,7 +8,6 @@ html, body {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
-    background: #0f0f0f; /* Dark background */
 }
 
 /* Full-screen animated background */
@@ -20,23 +19,7 @@ html, body {
     height: 100vh;
     z-index: -1; /* Keeps it behind content */
     pointer-events: none;
-    background: transparent;
-}
-
-/* Main Content Box - Confined to 1000px */
-.main-box {
-    width: 1000px;
-    max-width: 100%;
-    margin: 20px auto; /* Centers the box with some spacing */
-    padding: 20px;
-    background: rgba(30, 30, 30, 0.95); /* Dark semi-transparent background */
-    position: relative;
-    z-index: 10; /* Keeps content above the background */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+    background: rgb(43, 43, 43);
 }
 
 /* Full-Width Header */
@@ -76,18 +59,17 @@ html, body {
 
 /* Ensure main content is not covered by fixed header */
 .main-box {
-    width: 1000px;
+    width: 100%;
+    background: transparent;
     max-width: 100%;
-    margin: 80px auto 20px; /* Pushes content down below the header */
+    margin-top: 120px; /* Pushes content down below the header */
     padding: 20px;
-    background: rgba(30, 30, 30, 0.95);
     position: relative;
     z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
 }
 
 /* Sidebar Navigation */
@@ -147,11 +129,12 @@ html, body {
 
 /* Games list */
 .game-container {
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 800px; 
-    width: 100%;
+    width: 100vw;
     margin-top: -100px;
 }
 
@@ -160,8 +143,8 @@ html, body {
     justify-content: center;
     align-items: center;
     height: auto; 
-    width: 100%;
-    margin-top: -100px;
+    width: 100vw;
+    margin-top: auto;
 }
 
 .games-list {
@@ -169,7 +152,6 @@ html, body {
     gap: 20px;
     overflow-x: auto; 
     white-space: nowrap; 
-    background: rgba(30, 30, 30, 0.9); 
     box-shadow: 0px 0px 25px rgba(100, 100, 100, 0.8);
     padding: 20px;
     max-width: 90%;
