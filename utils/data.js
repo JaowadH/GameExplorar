@@ -477,6 +477,32 @@ const VideoGames = [
     released: true,
     image: "/images/Kingdom-Come-Deliverance-II.jpg",
   },
+  {
+    id: 37,
+    title: "The Elder Scrolls VI",
+    description:
+      "A reimagining of the classic fantasy game series, featuring a new storyline and a more open-world setting.",
+    developer: "Bethesda Game Studios",
+    releaseYear: 2026,
+    genre: Genres.RPG,
+    averageRating: null,
+    numberOfReviews: null,
+    released: false,
+    image: "/images/elder-scrolls-6.jpg",
+  },
+  {
+    id: 38,
+    title: "Dune: Awakening",
+    description:
+      "A MMORPG based on the massively successful sci-fi series 'Dune'.",
+    developer: "Funcom",
+    releaseYear: 2025,
+    genre: Genres.RPG,
+    averageRating: null,
+    numberOfReviews: null,
+    released: false,
+    image: "/images/dune-awakening.jpg",
+  },
 ];
 
 module.exports = { Genres, VideoGames };

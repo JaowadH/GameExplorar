@@ -100,8 +100,6 @@ app.get('/upcoming', (req, res) => {
 app.get('/hidden-gems', (req, res) => {
     try {
         const hiddenGems = getHiddenGems();
-        
-        console.log("Hidden Gems:", hiddenGems); // Debugging log
 
         res.render('hiddenGems', { hiddenGems, pageTitle: "Hidden Gems" });
     } catch (error) {
