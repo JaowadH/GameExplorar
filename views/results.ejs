@@ -1,0 +1,6 @@
+<h2>Search Results</h2>
+<ul>
+    <% games.forEach(game => { %>
+        <li><strong><%= game.title %></strong> - <%= game.genre %> - <%= game.developer %> - Rating: <%= game.averageRating %></li>
+    <% }) %>
+</ul>
