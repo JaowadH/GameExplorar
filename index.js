@@ -9,6 +9,10 @@ const {
     selectRandomGameId, 
     getHiddenGems 
 } = require('./utils/gameUtils');
+const { rmSync } = require('fs');
+
+// Set up the global VideoGames 
+global.VideoGames = VideoGames;
 
 const app = express();
 
@@ -83,7 +87,9 @@ app.get('/random', (req, res) => {
 // Upcoming Games Page
 app.get('/upcoming', (req, res) => {
     try {
-        const upcomingGames = VideoGames.filter(game => game.year > new Date().getFullYear()).slice(0, 5);
+        // Filter games where released is false
+        const upcomingGames = VideoGames.filter(game => !game.released).slice(0, 5);
+        
         res.render('upcoming', {upcomingGames, pageTitle: "Upcoming Games"});
     } catch (error) {
         console.error("Error fetching upcoming games:", error);
@@ -95,11 +101,54 @@ app.get('/upcoming', (req, res) => {
 app.get('/hidden-gems', (req, res) => {
     try {
         const hiddenGems = getHiddenGems();
-        res.render('hiddenGems', {hiddenGems, pageTitle: "Hidden Gems"});
+
+        res.render('hiddenGems', { hiddenGems, pageTitle: "Hidden Gems" });
     } catch (error) {
         console.error("Error fetching hidden gems:", error);
-        res.status(500).render('error', {message: "Internal Server Error"});
+        res.status(500).render('error', { message: "Internal Server Error" });
     }
+});
+
+app.get('/search', (req, res) => {
+    const { t, g, d, y, review, rate, released } = req.query;
+    let filterGames = VideoGames;
+
+    if (t) {
+        filterGames = filterGames.filter(game => 
+            game.title.toLowerCase().includes(t.toLowerCase()));
+    }
+
+    if (g) {
+        filterGames = filterGames.filter(game => 
+            game.genre.toLowerCase().includes() === g.toLowerCase());
+    }
+
+    if (d) {
+        filterGames = filterGames.filter(game => 
+            game.developer.toLowerCase() === d.toLowerCase());
+    }
+
+    if (y) {
+        filterGames = filterGames.filter(game => 
+            game.year === parseInt(y));
+    }
+
+    if (review) {
+        filterGames = filterGames.filter(game => 
+            game.numberOfReviews >= parseInt(review));
+    }
+
+    if (rate) {
+        filterGames = filterGames.filter(game => 
+            game.averageRating >= parseFloat(rate));
+    }
+
+    if (released !== undefined) {
+        filterGames = filterGames.filter(game => 
+            game.released === (released === 'true'));
+    }
+
+    res.render("results", { games: filterGames });
 });
 
 // 404 Page - Catch-all Route

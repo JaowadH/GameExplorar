@@ -1,14 +1,33 @@
+/* Default (Dark Mode) */
+:root {
+    --background-color: rgba(71, 71, 71, 0.5);
+    --text-color: white;
+    --hover-color: #559eff;
+    --card-background: rgba(85, 85, 85, 0.7);
+}
+
+/* Light Mode */
+.light-mode {
+    --background-color: rgba(240, 240, 240, 0.9);
+    --text-color: black;
+    --hover-color: #0056b3;
+    --card-background: rgba(220, 220, 220, 0.9);
+}
+
+/* Game Container */
 .game-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80vh; 
-    width: 100%;
+    height: 70vh; 
+    margin-top: auto;
+    width: 90vw;
     padding: 20px;
     box-sizing: border-box;
+    background: var(--background-color);
 }
 
-
+/* Game Image, Details, and Recommended Sections */
 .game-image,
 .game-details,
 .recommended-games {
@@ -19,6 +38,7 @@
     justify-content: center;
 }
 
+/* Game Image */
 .game-image {
     flex: 1.5; 
     display: flex;
@@ -33,10 +53,13 @@
     border-radius: 10px;
 }
 
+/* Game Details */
 .game-details {
     flex: 2;
+    color: var(--text-color);
 }
 
+/* Recommended Games */
 .recommended-games {
     flex: 1;
 }
@@ -53,14 +76,16 @@
     margin-bottom: 10px;
 }
 
+/* Recommended Game Image */
 .recommended-games img {
     width: 100px;
     height: 150px;
     border-radius: 5px;
 }
 
+/* Recommended Game Links */
 .recommended-games a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     display: block;
     padding: 10px 0; 
@@ -68,13 +93,8 @@
 }
 
 .recommended-games a:hover {
-    background-color:none;
-    color: #559eff;
+    color: var(--hover-color);
     cursor: pointer;
     transform: scale(1.05);
-    text-shadow: 0px 0px 15px rgba(85, 158, 255, 0.8); 
-    transition: 
-        background-color 0.3s ease, 
-        box-shadow 0.3s ease, 
-        transform 0.3s ease;
+    text-shadow: 0px 0px 15px var(--hover-color); 
 }

@@ -1,6 +1,4 @@
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Explorer</title>
     <link rel="stylesheet" href="/styles.css">
     <% if (typeof pageCSS !== 'undefined' && pageCSS) { %>
@@ -9,17 +7,31 @@
 </head>
 <body>
 
-    <!-- Include Header -->
-    <%- include('partials/header', { pageTitle: (typeof pageTitle !== 'undefined' ? pageTitle : "Default Title") }) %>
+    <!-- Single Canvas for Animated Background -->
+    <canvas id="gameCanvas"></canvas>
 
+    <!-- Full-Width Header -->
+    <header class="header">
+        <%- include('partials/header', { pageTitle: (typeof pageTitle !== 'undefined' ? pageTitle : "Default Title") }) %>
+    </header>
 
-    <main>
-        <%- body %> 
-    </main>
+    <!-- Main Wrapper Box -->
+    <div class="main-box">
+        <main>
+            <%- body %> 
+        </main>
+    </div>
 
-    <!-- Include Footer -->
-    <%- include('partials/footer') %>
+    <!-- Full-Width Footer -->
+    <footer class="footer">
+        <%- include('partials/footer') %>
+    </footer>
 
+    <!-- Core Script -->
     <script src="/script.js"></script>
+
+    <!-- Background Animation Script -->
+    <script src="/backgroundAnimation.js"></script>
+
 </body>
 </html>
