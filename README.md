@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ab3tzsY3)
 # Video Game Library - Midterm Sprint
 
@@ -30,3 +31,6 @@
 - **Random Game Feature** - Retrieve a random game ID to display a game at random.
 - **Hidden Gems Page** - Showcase games that have high ratings but are lesser-known.
 
+=======
+# GameExplorar
+>>>>>>> fc78c2fa77ed05cd6bcd37e0ac045f0af1d8c2f4
